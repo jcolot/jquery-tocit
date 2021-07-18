@@ -1,13 +1,13 @@
-jquery.tocify.js - jQuery Table of Contents
+jquery-tocit - jQuery Table of Contents
 -------------------------------------------
 
-Note: I haven't had time to maintain this repository for the last few years, so if anyone would like a particular fix just send me a tip via Paypal (gfranko5@yahoo.com) and I'll look into it
+This is a clone of jquery-tocify that is not maintained anymore
 
-A jQuery plugin that dynamically generates a table of contents. Tocify can be optionally styled with **Twitter Bootstrap** or **jQueryUI Themeroller**, and optionally animated with jQuery show/hide effects. Tocify also optionally provides support for **smooth scrolling**, **scroll highlighting**, **scroll page extending**, and **forward and back button support**.
+A jQuery plugin that dynamically generates a table of contents. Tocit can be optionally styled with **Twitter Bootstrap** or **jQueryUI Themeroller**, and optionally animated with jQuery show/hide effects. Tocit also optionally provides support for **smooth scrolling**, **scroll highlighting**, **scroll page extending**, and **forward and back button support**.
 
-[Homepage](http://gregfranko.com/jquery.tocify.js/)
+[Homepage](http://gregfranko.com/jquery.tocit/)
 
-[Annotated Source Code](http://gregfranko.com/jquery.tocify.js/docs/jquery.tocify.html)
+[Annotated Source Code](http://gregfranko.com/jquery-tocit/docs/jquery-tocit.html)
 
 **Notable Features**
 
@@ -39,14 +39,14 @@ All unit tests are written using the Jasmine Framework (Work in Progress)
 ##Contributing
 Take care to maintain the existing coding style. Add Jasmine unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
 
-If you plan to contribute to `Tocify` in the future, keep in mind that you should make sure your code passes the Grunt checks.  If you are on Windows (like me) remember you need to run the grunt command using `grunt.cmd`.  Also, if you have trouble getting the Jasmine Unit Tests to work with PhantomJS 1.5 (the current release), install PhantomJS 1.3.
+If you plan to contribute to `Tocit` in the future, keep in mind that you should make sure your code passes the Grunt checks.  If you are on Windows (like me) remember you need to run the grunt command using `grunt.cmd`.  Also, if you have trouble getting the Jasmine Unit Tests to work with PhantomJS 1.5 (the current release), install PhantomJS 1.3.
 
-After you have verified your code, send a pull request to the `Tocify` dev branch.  After you send a pull request, you will hear back from me shortly after I review your code.
+After you have verified your code, send a pull request to the `Toci` dev branch.  After you send a pull request, you will hear back from me shortly after I review your code.
 
 You'll find source code in the "src" subdirectory!
 
 ##Forking
-If you find that you need a feature that Tocify does not currently support, either let me know via the Tocify issue tracker, or fork Tocify on Github and easily extend it to create your own widget!
+If you find that you need a feature that Tocit does not currently support, either let me know via the Tocit issue tracker, or fork Tocit on Github and easily extend it to create your own widget!
 
 ###Contributors
 
