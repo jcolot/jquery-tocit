@@ -1,9 +1,12 @@
 jquery-tocit - jQuery Table of Contents
 -------------------------------------------
 
-This is a clone of jquery-tocify that is not maintained anymore
+This is a clone of the unmaintained project [jquery-tocify](https://github.com/gfranko/jquery.tocify.js)
 
-A jQuery plugin that dynamically generates a table of contents. Tocit can be optionally styled with **Twitter Bootstrap** or **jQueryUI Themeroller**, and optionally animated with jQuery show/hide effects. Tocit also optionally provides support for **smooth scrolling**, **scroll highlighting**, **scroll page extending**, and **forward and back button support**.
+A jQuery plugin that dynamically generates a table of contents. Tocit can be optionally styled with **Twitter
+Bootstrap** or **jQueryUI Themeroller**, and optionally animated with jQuery show/hide effects. Tocit also optionally
+provides support for **smooth scrolling**, **scroll highlighting**, **scroll page extending**, and **forward and back
+button support**.
 
 [Homepage](http://gregfranko.com/jquery.tocit/)
 
@@ -11,55 +14,66 @@ A jQuery plugin that dynamically generates a table of contents. Tocit can be opt
 
 **Notable Features**
 
-   - Themeable with **Twitter Bootstrap** or **jQueryUI Themeroller**
+- Themeable with **Twitter Bootstrap** or **jQueryUI Themeroller**
 
-   - Supports dynamic scroll and click **jQuery show/hide effects**
+- Supports dynamic scroll and click **jQuery show/hide effects**
 
-   - Supports forward and back button support
+- Supports forward and back button support
 
-   - Supports **smooth scrolling** animations
+- Supports **smooth scrolling** animations
 
-   - Supports dynamic **scroll highlighting**
+- Supports dynamic **scroll highlighting**
 
-   - Supports a **page extender** option to make sure a page is big enough to scroll to all table of content items
+- Supports a **page extender** option to make sure a page is big enough to scroll to all table of content items
 
-   - Passes **jsHint** with no errors
+- Passes **jsHint** with no errors
 
-##Requirements
+## Requirements
+
 jQuery 1.7.2+
 
 jQueryUI Widget Factory 1.8.21+
 
-##Browser Support
+## Browser Support
+
 IE7+, Firefox 4+, Chrome, Safari 4+, and Opera 11+
 
-##Unit Tests
+## Unit Tests
+
 All unit tests are written using the Jasmine Framework (Work in Progress)
 
-##Contributing
-Take care to maintain the existing coding style. Add Jasmine unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
+## Contributing
 
-If you plan to contribute to `Tocit` in the future, keep in mind that you should make sure your code passes the Grunt checks.  If you are on Windows (like me) remember you need to run the grunt command using `grunt.cmd`.  Also, if you have trouble getting the Jasmine Unit Tests to work with PhantomJS 1.5 (the current release), install PhantomJS 1.3.
+Take care to maintain the existing coding style. Add Jasmine unit tests for any new or changed functionality. Lint and
+test your code using [grunt](https://github.com/cowboy/grunt).
 
-After you have verified your code, send a pull request to the `Toci` dev branch.  After you send a pull request, you will hear back from me shortly after I review your code.
+If you plan to contribute to `Tocit` in the future, keep in mind that you should make sure your code passes the Grunt
+checks. If you are on Windows (like me) remember you need to run the grunt command using `grunt.cmd`. Also, if you have
+trouble getting the Jasmine Unit Tests to work with PhantomJS 1.5 (the current release), install PhantomJS 1.3.
+
+After you have verified your code, send a pull request to the `Toci` dev branch. After you send a pull request, you will
+hear back from me shortly after I review your code.
 
 You'll find source code in the "src" subdirectory!
 
-##Forking
-If you find that you need a feature that Tocit does not currently support, either let me know via the Tocit issue tracker, or fork Tocit on Github and easily extend it to create your own widget!
+## Forking
 
-###Contributors
+If you find that you need a feature that Tocit does not currently support, either let me know via the Tocit issue
+tracker, or fork Tocit on Github and easily extend it to create your own widget!
 
-  * [Greg Franko](https://github.com/gfranko)
+### Contributors
 
-  * [Mat Ryer, Stretchr](https://github.com/matryer)
+* [Greg Franko](https://github.com/gfranko)
 
-##Change Log
+* [Mat Ryer, Stretchr](https://github.com/matryer)
+
+## Change Log
 
 `1.9.0` - October 1, 2013
 
 - Fixed hash/history bug that threw a JavaScript error when the hash did not match an element on the page
-- Fixed bug that affected TOC items which contained special characters [#45](https://github.com/gfranko/jquery.tocify.js/issues/45)
+- Fixed bug that affected TOC items which contained special
+  characters [#45](https://github.com/gfranko/jquery.tocify.js/issues/45)
 - Only register scroll event handlers if necessary [#44](https://github.com/gfranko/jquery.tocify.js/issues/44)
 - Improved the **scrollHistory** option [#42](https://github.com/gfranko/jquery.tocify.js/issues/42)
 
@@ -76,7 +90,9 @@ If you find that you need a feature that Tocit does not currently support, eithe
 `1.6.0` - July 24, 2013
 
 - Updated the **scrollTo**  option to accept a function [#33](https://github.com/gfranko/jquery.tocify.js/issues/33)
-- Improved scroll highlighting accuracy [#33](https://github.com/gfranko/jquery.tocify.js/issues/33) [#34](https://github.com/gfranko/jquery.tocify.js/issues/34) Special thanks to [Andre Kampert](https://github.com/andrekampert) for this improvement
+- Improved scroll highlighting
+  accuracy [#33](https://github.com/gfranko/jquery.tocify.js/issues/33) [#34](https://github.com/gfranko/jquery.tocify.js/issues/34)
+  Special thanks to [Andre Kampert](https://github.com/andrekampert) for this improvement
 
 `1.5.0` - July 5, 2013
 
@@ -103,13 +119,17 @@ If you find that you need a feature that Tocit does not currently support, eithe
 
 `1.2.0` - December 31, 2012
 
-- Multiple bug fixes: [#8](https://github.com/gfranko/jquery.tocify.js/issues/8), [#9](https://github.com/gfranko/jquery.tocify.js/issues/9), [#11](https://github.com/gfranko/jquery.tocify.js/issues/11), [#12](https://github.com/gfranko/jquery.tocify.js/issues/12)
+- Multiple bug fixes: [#8](https://github.com/gfranko/jquery.tocify.js/issues/8)
+  , [#9](https://github.com/gfranko/jquery.tocify.js/issues/9)
+  , [#11](https://github.com/gfranko/jquery.tocify.js/issues/11)
+  , [#12](https://github.com/gfranko/jquery.tocify.js/issues/12)
 
 `1.1.0` - November 19, 2012
 
-- **BREAKING CHANGE** : Removed the History.js logic.  All history logic is now using a hash bang instead of the HTML5 pushstate API.
+- **BREAKING CHANGE** : Removed the History.js logic. All history logic is now using a hash bang instead of the HTML5
+  pushstate API.
 
--  Added the **history** option
+- Added the **history** option
 
 `1.0.0` - October 7, 2012
 
@@ -121,7 +141,8 @@ If you find that you need a feature that Tocit does not currently support, eithe
 
 `0.8.0` - September 26, 2012
 
-- Numerous bug fixes ([nested page structure bug](https://github.com/gfranko/jquery.tocify.js/issues/4), unique naming bug, show/hide bugs)
+- Numerous bug fixes ([nested page structure bug](https://github.com/gfranko/jquery.tocify.js/issues/4), unique naming
+  bug, show/hide bugs)
 
 `0.7.0` - September 24, 2012
 
@@ -157,16 +178,18 @@ If you find that you need a feature that Tocit does not currently support, eithe
 
 `0.2.0` - July 16, 2012
 
-- Added the **scrollTo** option.  Upgraded to jQueryUI 1.8.21.
+- Added the **scrollTo** option. Upgraded to jQueryUI 1.8.21.
 - Multiple bug fixes.
 - Upgraded the project page (included in the demos folder) to use Twitter Bootstrap.
-* I will soon move the demo page into it's own separate project to create a boilerplate for documenting open source projects.
+
+* I will soon move the demo page into it's own separate project to create a boilerplate for documenting open source
+  projects.
 
 `0.1.0` - July 12, 2012
 
-- Initial Tocify release.  Added annotated source code and documentation
-
+- Initial Tocify release. Added annotated source code and documentation
 
 ## License
+
 Copyright (c) 2012 Greg Franko  
 Licensed under the MIT license.

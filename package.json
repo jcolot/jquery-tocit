@@ -1,31 +1,46 @@
 {
-  "name": "jquery.tocify",
-  "title": "jquery Tocify",
+  "name": "jquery.tocit",
+  "title": "jquery Tocit",
   "description": "A jQuery plugin that creates a dynamic table of contents",
   "version": "1.9.0",
-  "homepage": "http://gregfranko.com/jquery.tocify.js/",
+  "main": "dist/jquery-tocit.min.js",
+  "browser": "dist/jquery.tocit.js",
+  "license": "MIT",
   "author": {
-    "name": "Greg Franko",
-    "email": "gfranko5@yahoo.com",
-    "url": "http://www.gregfranko.com"
+    "name": "Julien Colot",
+    "email": "julien.colot@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/gfranko/jquery.tocify.js.git"
+    "url": "git://github.com/jcolot/jquery-tocit.git"
   },
   "bugs": {
-    "url": "https://github.com/gfranko/jquery.tocify.js/issues"
+    "url": "https://github.com/jcolot/jquery-tocit/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://www.gregfranko.com/jquery.tocify.js/blob/master/LICENSE-MIT"
-    }
-  ],
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-uglify": "~0.2.0",
-    "grunt-contrib-jshint": "~0.3.0"
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "babel": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint-config-jquery": "3.0.0",
+    "eslint-plugin-import": "2.22.0",
+    "grunt": "^1.4.1",
+    "grunt-babel": "^8.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-eslint": "23.0.0",
+    "load-grunt-tasks": "^5.1.0",
+    "lodash": "^4.17.21",
+    "mocha": "^9.1.0",
+    "selenium-webdriver": "^4.0.0-beta.4"
   },
-  "keywords": ["jQuery", "jQueryUI", "Twitter Bootstrap", "Table of Contents Plugin"]
+  "keywords": [
+    "jQuery",
+    "jQueryUI",
+    "Bootstrap",
+    "Table of Contents Plugin"
+  ],
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "jquery-ui": "^1.12.1"
+  }
 }

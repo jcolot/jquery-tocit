@@ -1,38 +1,54 @@
 module.exports = function(grunt) {
 
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    jshint: {
-      files: ['Gruntfile.js', 'public/js/app/**/*.js', '!public/js/app/**/*min.js'],
-      options: {
-        globals: {
-          jQuery: true,
-          console: false,
-          module: true,
-          document: true
-        }
-      }
-    },
-    uglify: {
-      my_target: {
-        files: {
-          './src/javascripts/jquery.tocify.min.js': ['./src/javascripts/jquery.tocify.js']
-        }
-      },
-      options: {
-        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+    grunt.initConfig({
+        pkg    : grunt.file.readJSON('package.json'),
+        eslint : {
+            options : {
+                maxWarnings : 100
+            },
+
+            // We have to explicitly declare "src" property otherwise "newer"
+            // task wouldn't work properly :/
+            dist : {
+                src : ['dist/jquery.js', 'dist/jquery.min.js']
+            },
+            dev : {
+                src : [
+                    'src/*.js',
+                ]
+            }
+        },
+        babel: {
+            options: {
+                sourceMap: true,
+                presets: ['@babel/preset-env']
+            },
+            dist: {
+                files: {
+                    './dist/jquery-tocit.es5.js' : ['./src/jquery-tocit.js']
+                }
+            }
+        },
+        uglify : {
+            target : {
+                files : {
+                    './dist/jquery-tocit.min.js' : ['./dist/jquery-tocit.es5.js']
+                }
+            },
+            options : {
+                banner : '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
         '<%= grunt.template.today("yyyy-mm-dd") %> \n' +
         '<%= pkg.homepage ? "* " + pkg.homepage : "" %>\n' +
         '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-        ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %>*/\n'
-      }
-    }
-  });
+        ' Licensed <%= _.map(pkg.licenses, "type").join(", ") %>*/\n'
+            }
+        }
+    });
 
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.registerTask('test', ['jshint']);
-  grunt.registerTask('build', ['uglify']);
-  grunt.registerTask('default', ['test', 'build']);
+    require('load-grunt-tasks')(grunt);
+
+    grunt.registerTask('test', ['eslint']);
+    grunt.registerTask('build', ['babel', 'uglify']);
+    grunt.registerTask('default', ['test', 'build']);
 
 };
