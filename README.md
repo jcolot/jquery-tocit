@@ -8,9 +8,6 @@ Bootstrap** or **jQueryUI Themeroller**, and optionally animated with jQuery sho
 provides support for **smooth scrolling**, **scroll highlighting**, **scroll page extending**, and **forward and back
 button support**.
 
-[Homepage](http://gregfranko.com/jquery.tocit/)
-
-[Annotated Source Code](http://gregfranko.com/jquery-tocit/docs/jquery-tocit.html)
 
 **Notable Features**
 
@@ -191,5 +188,5 @@ tracker, or fork Tocit on Github and easily extend it to create your own widget!
 
 ## License
 
-Copyright (c) 2012 Greg Franko  
+Copyright (c) 2012 Greg Franko, 2021 Julien Colot  
 Licensed under the MIT license.
