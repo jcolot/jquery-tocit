@@ -1,6 +1,6 @@
-/* jquery tocit - v1.9.0 - 2013-10-01
-* http://www.gregfranko.com/jquery.tocit.js/
-* Copyright (c) 2013 Greg Franko; Licensed MIT */
+/* jquery-tocit - v1.10.0 - 2021-08-24
+* http://github.com/jscolot/jquery-tocit/
+* Copyright (c) 2013 Greg Franko, 2021 Julien Colot; Licensed MIT */
 
 (function (factory) {
     'use strict';
@@ -49,7 +49,7 @@
     $.widget('toc.tocit', {
 
         // Plugin version
-        version : '1.9.0',
+        version : '1.9.1',
 
         // These options will be used as defaults
         options : {

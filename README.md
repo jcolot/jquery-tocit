@@ -66,6 +66,12 @@ tracker, or fork Tocit on Github and easily extend it to create your own widget!
 
 ## Change Log
 
+`1.10.0` - August 24, 2021
+
+- Change name to jquery-tocit
+- Integrate pending pull requests from jquery.tocify.js
+
+
 `1.9.0` - October 1, 2013
 
 - Fixed hash/history bug that threw a JavaScript error when the hash did not match an element on the page
