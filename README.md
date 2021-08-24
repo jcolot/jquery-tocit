@@ -37,7 +37,7 @@ IE7+, Firefox 4+, Chrome, Safari 4+, and Opera 11+
 
 ## Unit Tests
 
-All unit tests are written using the Jasmine Framework (Work in Progress)
+Work in progress
 
 ## Contributing
 
@@ -64,9 +64,11 @@ tracker, or fork Tocit on Github and easily extend it to create your own widget!
 
 * [Mat Ryer, Stretchr](https://github.com/matryer)
 
+* [Julien Colot](https://github.com/jcolot)
+
 ## Change Log
 
-`1.10.0` - August 24, 2021
+`1.10.1` - August 24, 2021
 
 - Change name to jquery-tocit
 - Integrate pending pull requests from jquery.tocify.js

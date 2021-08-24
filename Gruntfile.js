@@ -25,7 +25,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    './dist/jquery-tocit.es5.js' : ['./src/jquery-tocit.js']
+                    './dist/jquery-tocit.js' : ['./src/jquery-tocit.js']
                 }
             }
         },
@@ -48,7 +48,8 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.registerTask('test', ['eslint']);
-    grunt.registerTask('build', ['babel', 'uglify']);
+    grunt.registerTask('uglify', ['babel', 'uglify'])
+    grunt.registerTask('build', ['babel']);
     grunt.registerTask('default', ['test', 'build']);
 
 };

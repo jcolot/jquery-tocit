@@ -1,4 +1,4 @@
-/* jquery-tocit - v1.10.0 - 2021-08-24
+/* jquery-tocit - v1.10.1 - 2021-08-24
 * http://github.com/jscolot/jquery-tocit/
 * Copyright (c) 2013 Greg Franko, 2021 Julien Colot; Licensed MIT */
 
