@@ -1,6 +1,8 @@
-// eslint-disable-next-line no-unused-vars
-import $ from 'jquery';
+import {jQuery, $} from 'jquery';
 import 'jquery-ui';
+
+window.jQuery = jQuery;
+window.$ = jQuery; 
 
 (function (factory) {
 
@@ -269,7 +271,7 @@ import 'jquery-ui';
                     } else {
 
                         // Loops through all of the subHeading elements
-                        $.each($(this).find(widgetThis.options.selectors), (subHeading) => {
+                        $.each($(this).find(widgetThis.options.selectors), function(subHeading) {
 
                             // If the element matches the ignoreSelector then we skip it
                             if ($(subHeading).is(ignoreSelector)) {

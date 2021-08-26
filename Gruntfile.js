@@ -8,12 +8,6 @@ const pkg = require('./package.json');
 const TerserPlugin = require('terser-webpack-plugin');
 
 const date = (new Date()).toISOString().replace(/:\d+\.\d+Z$/, 'Z');
-const banner = `
-jQuery Table of Contents ${pkg.version}
-Copyright 2021 - Greg Franko, Julien Colot
-jquery-tocit may be freely distributed under the MIT license.
-Date: ${date}
-`;
 
 module.exports = function(grunt) {
 
@@ -29,6 +23,20 @@ module.exports = function(grunt) {
                 ]
             }
         },
+        'string-replace': {
+            dist: {
+                files: {
+                    'demos/': ['src/html/*.html'],
+                },
+                options: {
+                    replacements: [{
+                        pattern: /___VERSION___/g,
+                        replacement: pkg.version
+                        }
+                    ]
+                }
+            }
+        },
         webpack: {
             options: {},
             prod: require('./config/webpack.config.production.js')  
@@ -38,10 +46,10 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.loadNpmTasks('grunt-webpack');
+    grunt.loadNpmTasks('grunt-string-replace');
 
     grunt.registerTask('test', ['eslint']);
-    grunt.registerTask('uglify', ['babel', 'uglify'])
-    grunt.registerTask('build', ['webpack']);
+    grunt.registerTask('build', ['string-replace', 'webpack']);
     grunt.registerTask('default', ['test', 'build']);
 
 };

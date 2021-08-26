@@ -19,13 +19,13 @@ const minBanner = banner;
 
 module.exports = {
   entry: {
-    'jquery-tocit': './src/jquery-tocit.js',
+    'jquery-tocit': './src/js/jquery-tocit.js',
   },
   mode: 'production',
   optimization: {
     minimizer: [
       new TerserPlugin({
-        test: /\min\.js$/g,
+        test: /\.min\.js$/g,
         extractComments: false,
         terserOptions: {
           sourceMap: true,
@@ -56,9 +56,15 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        //exclude: /node_modules/,
+        exclude: /node_modules/,
         use: [
           {
+            loader: 'string-replace-loader',
+            options: {
+              search: '@@VERSION@@',
+              replace: pkg.version,
+            },
+          }, {
             loader: 'babel-loader',
           },
         ],
