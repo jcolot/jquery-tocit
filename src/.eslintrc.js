@@ -8,7 +8,7 @@ module.exports = {
     },
     parserOptions : {
         ecmaVersion : 2017,
-        sourceType  : 'script'
+        sourceType  : 'module'
     },
     extends : 'eslint:recommended',
     rules   : {
@@ -307,7 +307,7 @@ module.exports = {
             'always'
         ],
         'semi-spacing'                : 'error',
-        'sort-imports'                : 'error',
+        'sort-imports'                : 'off',
         'sort-keys'                   : 'off',
         'sort-vars'                   : 'off',
         'space-before-blocks'         : 'warn',

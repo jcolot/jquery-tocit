@@ -1,16 +1,27 @@
+const fs = require('fs');
+const path = require('path');
+
+const webpack = require('webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+const pkg = require('./package.json');
+const TerserPlugin = require('terser-webpack-plugin');
+
+const date = (new Date()).toISOString().replace(/:\d+\.\d+Z$/, 'Z');
+const banner = `
+jQuery Table of Contents ${pkg.version}
+Copyright 2021 - Greg Franko, Julien Colot
+jquery-tocit may be freely distributed under the MIT license.
+Date: ${date}
+`;
+
 module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg    : grunt.file.readJSON('package.json'),
         eslint : {
             options : {
-                maxWarnings : 100
-            },
-
-            // We have to explicitly declare "src" property otherwise "newer"
-            // task wouldn't work properly :/
-            dist : {
-                src : ['dist/jquery.js', 'dist/jquery.min.js']
+                maxWarnings : 100,
             },
             dev : {
                 src : [
@@ -18,38 +29,45 @@ module.exports = function(grunt) {
                 ]
             }
         },
-        babel: {
-            options: {
-                sourceMap: true,
-                presets: ['@babel/preset-env']
-            },
-            dist: {
-                files: {
-                    './dist/jquery-tocit.js' : ['./src/jquery-tocit.js']
-                }
-            }
-        },
-        uglify : {
-            target : {
-                files : {
-                    './dist/jquery-tocit.min.js' : ['./dist/jquery-tocit.es5.js']
-                }
-            },
-            options : {
-                banner : '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-        '<%= grunt.template.today("yyyy-mm-dd") %> \n' +
-        '<%= pkg.homepage ? "* " + pkg.homepage : "" %>\n' +
-        '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-        ' Licensed <%= _.map(pkg.licenses, "type").join(", ") %>*/\n'
-            }
+        webpack: {
+            options: {},
+            prod: require('./config/webpack.config.production.js')  
         }
+//        {
+//        babel: {
+//            options: {
+//                sourceMap: true,
+//                presets: ['@babel/preset-env']
+//            },
+//            dist: {
+//                files: {
+//                    './dist/jquery-tocit.js' : ['./src/jquery-tocit.js']
+//                }
+//            }
+//        },
+//        uglify : {
+//            target : {
+//                files : {
+//                    './dist/jquery-tocit.min.js' : ['./dist/jquery-tocit.es5.js']
+//                }
+//            },
+//            options : {
+//                banner : '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+//        '<%= grunt.template.today("yyyy-mm-dd") %> \n' +
+//        '<%= pkg.homepage ? "* " + pkg.homepage : "" %>\n' +
+//        '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
+//        ' Licensed <%= _.map(pkg.licenses, "type").join(", ") %>*/\n'
+//            }
+//        }
     });
 
     require('load-grunt-tasks')(grunt);
 
+    grunt.loadNpmTasks('grunt-webpack');
+
     grunt.registerTask('test', ['eslint']);
     grunt.registerTask('uglify', ['babel', 'uglify'])
-    grunt.registerTask('build', ['babel']);
+    grunt.registerTask('build', ['webpack']);
     grunt.registerTask('default', ['test', 'build']);
 
 };

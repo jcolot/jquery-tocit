@@ -1,36 +1,12 @@
-/* jquery-tocit - v1.10.1 - 2021-08-24
-* http://github.com/jscolot/jquery-tocit/
-* Copyright (c) 2013 Greg Franko, 2021 Julien Colot; Licensed MIT */
+// eslint-disable-next-line no-unused-vars
+import $ from 'jquery';
+import 'jqueryui';
 
 (function (factory) {
-    'use strict';
 
-    if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define(['jquery'], factory);
-    } else if (typeof module === 'object' && module.exports) {
-        // Node/CommonJS
-        module.exports = function(root, jQuery) {
-            if (typeof jQuery === 'undefined') {
-                jQuery = require('jquery');
-            }
-
-            if (typeof jQuery.widget === 'undefined') {
-                require('jquery-ui/ui/widget');
-            }
-
-            factory(jQuery, window, document);
-
-            return jQuery;
-        };
-    } else {
-        // Browser globals
-        factory(jQuery, window, document);
-    }
+    factory(jQuery, window, document);
 
 }(function($, window, document) {
-    // ECMAScript 5 Strict Mode: [John Resig Blog Post](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
-    'use strict';
 
     const tocClassName = 'tocit';
     const tocFocusClassName = 'tocit-focus';
@@ -566,7 +542,7 @@
             const li = this.element.find('li');
 
             // Event delegation that looks for any clicks on list item elements inside of the HTML element calling the plugin
-            this.element.off('click.tocify', 'li');
+            this.element.off('click.tocit', 'li');
             this.element.on('click.tocit', 'li', /* @this */ function(event) {
 
                 if (widgetThis.options.history) {
@@ -595,8 +571,8 @@
             });
 
             // Mouseenter and Mouseleave event handlers for the list item's within the HTML element calling the plugin
-            li.off('mouseenter.tocify');
-            li.off('mouseleave.tocify');
+            li.off('mouseenter.tocit');
+            li.off('mouseleave.tocit');
             li.on({
 
                 // Mouseenter event handler
@@ -626,7 +602,7 @@
             // only attach handler if needed (expensive in IE)
             if (widgetThis.options.extendPage || widgetThis.options.highlightOnScroll || widgetThis.options.scrollHistory || widgetThis.options.showAndHideOnScroll) {
             // Window scroll event handler
-                $(window).off('scroll.tocify');
+                $(window).off('scroll.tocit');
                 $(window).on('scroll.tocit', function() {
 
                     // Once all animations on the page are complete, this callback function will be called
@@ -964,7 +940,7 @@
 
                 }).promise()
                     .done(function() {
-                        currentDiv.trigger('tocify.scrollEnd');
+                        currentDiv.trigger('tocit.scrollEnd');
                     });
             });
 
