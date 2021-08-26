@@ -33,32 +33,6 @@ module.exports = function(grunt) {
             options: {},
             prod: require('./config/webpack.config.production.js')  
         }
-//        {
-//        babel: {
-//            options: {
-//                sourceMap: true,
-//                presets: ['@babel/preset-env']
-//            },
-//            dist: {
-//                files: {
-//                    './dist/jquery-tocit.js' : ['./src/jquery-tocit.js']
-//                }
-//            }
-//        },
-//        uglify : {
-//            target : {
-//                files : {
-//                    './dist/jquery-tocit.min.js' : ['./dist/jquery-tocit.es5.js']
-//                }
-//            },
-//            options : {
-//                banner : '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-//        '<%= grunt.template.today("yyyy-mm-dd") %> \n' +
-//        '<%= pkg.homepage ? "* " + pkg.homepage : "" %>\n' +
-//        '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-//        ' Licensed <%= _.map(pkg.licenses, "type").join(", ") %>*/\n'
-//            }
-//        }
     });
 
     require('load-grunt-tasks')(grunt);
