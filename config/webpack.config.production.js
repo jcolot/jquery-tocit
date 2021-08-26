@@ -50,7 +50,7 @@ module.exports = {
       commonjs: 'jquery',
       amd: 'jquery',
     },
-    jqueryui: true
+    'jquery-ui': true
   },
   module: {
     rules: [

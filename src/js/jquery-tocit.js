@@ -1,7 +1,7 @@
-import {jQuery, $} from 'jquery';
+import $ from 'jquery';
 import 'jquery-ui';
 
-window.jQuery = jQuery;
+window.jQuery = $;
 window.$ = jQuery; 
 
 (function (factory) {
