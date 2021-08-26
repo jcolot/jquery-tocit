@@ -2,7 +2,7 @@
   "name": "jquery-tocit",
   "title": "jquery Tocit",
   "description": "A jQuery plugin that creates a dynamic table of contents",
-  "version": "1.10.6",
+  "version": "1.10.7",
   "main": "dist/jquery-tocit.js",
   "browser": "dist/jquery-tocit.min.js",
   "license": "MIT",
