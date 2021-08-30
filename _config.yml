@@ -1,0 +1,8 @@
+title: Jquery.tocify.js
+description: A jQuery plugin, inspired by the Can.js and JavaScript Garden documentation, that dynamically generates a table of contents.  Tocify can be optionally styled with ThemeRoller, and animated with jQuery show/hide effects.  Tocify also provides support for smooth scrolling, scroll highlighting, and the HTML5 pushstate API via History.js.
+google_analytics: UA-30888305-1
+show_downloads: true
+theme: jekyll-theme-slate
+
+gems:
+  - jekyll-mentions
