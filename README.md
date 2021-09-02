@@ -3,15 +3,12 @@ jquery-tocit - jQuery Table of Contents
 
 This is a clone of the unmaintained project [jquery-tocify](https://github.com/gfranko/jquery.tocify.js)
 
-A jQuery plugin that dynamically generates a table of contents. Tocit can be optionally styled with **Twitter
-Bootstrap** or **jQueryUI Themeroller**, and optionally animated with jQuery show/hide effects. Tocit also optionally
+A jQuery plugin that dynamically generates a table of contents. Tocit also optionally
 provides support for **smooth scrolling**, **scroll highlighting**, **scroll page extending**, and **forward and back
 button support**.
 
 
 **Notable Features**
-
-- Themeable with **Twitter Bootstrap** or **jQueryUI Themeroller**
 
 - Supports dynamic scroll and click **jQuery show/hide effects**
 
@@ -22,8 +19,6 @@ button support**.
 - Supports dynamic **scroll highlighting**
 
 - Supports a **page extender** option to make sure a page is big enough to scroll to all table of content items
-
-- Passes **jsHint** with no errors
 
 ## Requirements
 
@@ -41,14 +36,11 @@ Work in progress
 
 ## Contributing
 
-Take care to maintain the existing coding style. Add Jasmine unit tests for any new or changed functionality. Lint and
-test your code using [grunt](https://github.com/cowboy/grunt).
+Take care to maintain the existing coding style.
 
 If you plan to contribute to `Tocit` in the future, keep in mind that you should make sure your code passes the Grunt
-checks. If you are on Windows (like me) remember you need to run the grunt command using `grunt.cmd`. Also, if you have
-trouble getting the Jasmine Unit Tests to work with PhantomJS 1.5 (the current release), install PhantomJS 1.3.
-
-After you have verified your code, send a pull request to the `Toci` dev branch. After you send a pull request, you will
+checks. If you are on Windows (like me) remember you need to run the grunt command using `grunt.cmd`.
+After you have verified your code, send a pull request to the dev branch. After you send a pull request, you will
 hear back from me shortly after I review your code.
 
 You'll find source code in the "src" subdirectory!
