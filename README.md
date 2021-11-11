@@ -39,7 +39,7 @@ Work in progress
 Take care to maintain the existing coding style.
 
 If you plan to contribute to `Tocit` in the future, keep in mind that you should make sure your code passes the Grunt
-checks. If you are on Windows (like me) remember you need to run the grunt command using `grunt.cmd`.
+checks.
 After you have verified your code, send a pull request to the dev branch. After you send a pull request, you will
 hear back from me shortly after I review your code.
 
